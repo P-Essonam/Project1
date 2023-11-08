@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,700&family=Montserrat:wght@500&family=Noto+Sans+Kawi&family=Roboto+Mono:ital,wght@1,700&display=swap');
+/*  RESETS  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  VARIABLES  */
+
+:root {
+    --FF: 'Lora', serif;
+    --FF: 'Montserrat', sans-serif;
+    --FF: 'Noto Sans Kawi', sans-serif;
+    --FF: 'Roboto Mono', monospace;
+    --FC: white
+}
+
+html {
+    font-size: 1.5rem;
+    font-family: var(--FF);
+    color: var(--FC);
+    background-color: aqua;
+    font-style: normal;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+input, button, textarea {
+    font: inherit;
+}
+
+/*  UTILS CLASSES  */
+
+.nowrap {
+    white-space: nowrap;
+}
+
+
+/*  GENERAL STYLES  */
+
+.header {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+}
+
+:is(.header:hover, .header:focus-within) {
+    cursor: pointer;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem 0 1rem;
+}
+
+.nav__item {
+    align-self: flex-start;
+    position: relative;
+    top: 1rem;
+}
+
+.nav__item--title{
+    position: relative;
+    top: -0.6rem;
+}
+
+.nav__item--search{
+    position: relative;
+    top: 0.4rem;
+}
+
+.nav__item__h1 {
+    font-size: 6rem;
+}
+
+.nav__item__ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: inherit;
+
+}
+
+.nav__item__ul li {
+    list-style-type: none;
+    font-size: 0.6rem;
+    padding: 0 0.4rem 0 0;
+    text-transform: uppercase;
+}
+
+.nav__item--search input,
+.nav__item--search input:hover,
+.nav__item--search input:focus-within{
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: white;
+}
+
+.nav__item--search input::placeholder{
+    font-family: var(--FF);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    float: right;
+    padding: 1rem 1rem;
+
+}
+
+a:any-link{
+    text-decoration: none;
+    color: var(--FC);
+}
+
+.nav__item__ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__item__ul li{
+    list-style-type: none;
+}
+
+.img{
+    position: absolute;
+    top: 0;
+}
+
+.img:hover, .img:focus-within{
+    cursor: pointer;
+}
+
+.img__img {
+    position: sticky;
+    top: 0;
+    background-size: cover;
+}
